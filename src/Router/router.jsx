@@ -6,8 +6,13 @@ import MyCart from "../MyCart/MyCart";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import Details from "../Details/Details";
 import Description from "../Description/Description";
+import Apple from "../components/Apple";
+import Samsung from "../components/Samsung";
+import Google from "../components/Google";
+import Sony from "../components/Sony";
+import Intel from "../components/Intel";
+import Xiaomi from "../components/Xiaomi";
 
 const router = createBrowserRouter([
     {
@@ -36,13 +41,38 @@ const router = createBrowserRouter([
                 element : <Register></Register>
             },
             {
-                path : "/products/:brand",
-                element : <Details></Details>,
-                loader : ({params}) => fetch(`http://localhost:5002/products/${params.brand}`)
-            },
-            {
                 path : '/description/:id',
                 element : <Description></Description>
+            },
+            {
+                path : "/apple",
+                element  :<Apple></Apple>,
+                loader : () => fetch('http://localhost:5002/products')
+            },
+            {
+                path : "/samsung",
+                element : <Samsung></Samsung>,
+                loader : () => fetch('http://localhost:5002/products')
+            },
+            {
+                path : "/google",
+                element  : <Google></Google>,
+                loader : () => fetch('http://localhost:5002/products'),
+            },
+            {
+                path : "/sony",
+                element : <Sony></Sony>,
+                loader : () => fetch('http://localhost:5002/products'),
+            },
+            {
+                path  : "/intel",
+                element : <Intel></Intel>,
+                loader : () => fetch('http://localhost:5002/products'),
+            },
+            {
+                path : "/xiaomi",
+                element : <Xiaomi></Xiaomi>,
+                loader : () => fetch('http://localhost:5002/products')
             }
             
         ]
