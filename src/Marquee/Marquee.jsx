@@ -2,7 +2,8 @@ import Marquee from "react-fast-marquee";
 
 const Marque = () => {
     return (
-        <div className="container mx-auto my-5">
+        <div className="container mx-auto my-10 md:my-20">
+            <h1 className="text-center text-2xl my-10 md:my-20 font-bold">Our Sponsors</h1>
             <Marquee speed={140}>
                 <div className="">
                     <img src="https://demothemedh.b-cdn.net/axtronic/wp-content/uploads/2022/01/brand-2.svg" alt="" />
