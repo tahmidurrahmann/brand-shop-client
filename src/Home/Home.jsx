@@ -4,6 +4,7 @@ import { FaMedal } from 'react-icons/fa';
 import { IoHeartCircleOutline } from 'react-icons/io5';
 import { BsWallet } from 'react-icons/bs';
 import Brand from "../Brand/Brand";
+import Marque from "../Marquee/Marquee";
 
 const Home = () => {
     return (
@@ -40,6 +41,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Marque></Marque>
         </div>
     );
 };

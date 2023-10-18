@@ -14,7 +14,7 @@ const Navbar = () => {
                         isPending ? "pending" : isActive ? "bg-[#DD2955] py-1 px-3 md:py-2 md:px-5 rounded-lg text-xl text-white font-medium" : ""
                     }
                 >
-                    <h1 className="text-xl font-semibold">Home</h1>
+                    <button className="text-xl font-bold">Home</button>
                 </NavLink>
                 <NavLink
                     to="/addProduct"
@@ -22,7 +22,7 @@ const Navbar = () => {
                         isPending ? "pending" : isActive ? "bg-[#DD2955] py-1 px-2 md:py-2 md:px-5 rounded-lg text-xl text-white font-medium" : ""
                     }
                 >
-                    <h1 className="text-xl font-semibold">Add Product</h1>
+                    <button className="text-xl font-bold">Add Product</button>
                 </NavLink>
                 <NavLink
                     to="/myCart"
@@ -30,7 +30,7 @@ const Navbar = () => {
                         isPending ? "pending" : isActive ? "bg-[#DD2955] py-1 px-3 md:py-2 md:px-5 rounded-lg text-xl text-white font-medium" : ""
                     }
                 >
-                    <h1 className="text-xl font-semibold">My Cart</h1>
+                    <button className="text-xl font-bold">My Cart</button>
                 </NavLink>
             </div>
             <div>
@@ -40,7 +40,7 @@ const Navbar = () => {
                         isPending ? "pending" : isActive ? "bg-[#DD2955] py-1 px-3 md:py-2 md:px-5 rounded-lg text-xl text-white font-medium" : ""
                     }
                 >
-                Login
+                <button className="text-xl font-bold">Login</button>
                 </NavLink>
             </div>
         </div>
