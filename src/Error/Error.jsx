@@ -13,7 +13,7 @@ const Error = () => {
                 <p className="text-xl my-5">
                     <i>{error.statusText || error.message}</i>
                 </p>
-                <Link to='/'><button className="font-semibold px-4 py-2 rounded-xl text-xl text-white bg-[#F9A51A]">Go Home</button></Link>
+                <Link to='/'><button className="font-semibold px-4 py-2 rounded-xl text-xl text-white bg-[#DD2955]">Go Home</button></Link>
             </div>
         </div>
     );
