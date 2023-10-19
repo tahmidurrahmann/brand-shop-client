@@ -10,7 +10,7 @@ const Description = () => {
     const carts = {brand, description, name, photo, price, rating, select};
 
     const handleAddCart = () => {
-        fetch('http://localhost:5002/carts',{
+        fetch('https://dream-tech-server-app.vercel.app/carts',{
             method : "POST",
             headers : {
                 "Content-Type" : "application/json"
@@ -32,9 +32,9 @@ const Description = () => {
 
 
     return (
-        <div className="container mx-auto my-10 w-1/2">
+        <div className="container mx-auto my-10 px-10 lg:w-1/2">
             <div className="card bg-base-100 shadow-2xl">
-                <figure><img className="w-3/5 h-[300px] lg:h-[400px]" src={photo} alt="Shoes" /></figure>
+                <figure><img className="md:w-3/5 h-[300px] lg:h-[400px]" src={photo} alt="Shoes" /></figure>
                 <div className="card-body space-y-2">
                     <div className="text-center">
                         <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{name}</h2>

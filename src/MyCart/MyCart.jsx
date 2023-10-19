@@ -10,7 +10,7 @@ const MyCart = () => {
 
     return (
         <div>
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10 md:my-20">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 gap-3 my-10 md:my-20">
                 {
                     remainingCarts.map((cart,i) => <Cart key={i} remainingCarts={remainingCarts} setRemainingCarts={setRemainingCarts} cart={cart}></Cart>)
                 }

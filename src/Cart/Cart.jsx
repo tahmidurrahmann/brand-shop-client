@@ -17,7 +17,7 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5002/carts/${id}`, {
+                fetch(`https://dream-tech-server-app.vercel.app/carts/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -40,24 +40,26 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
     }
 
     return (
-        <div className="card bg-base-100 shadow-2xl">
-            <figure><img className="w-4/5 h-[300px] lg:h-[400px]" src={photo} alt="Shoes" /></figure>
-            <div className="card-body space-y-2">
-                <div className="text-center">
-                    <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{name}</h2>
+        <div className="px-10 md:px-5 lg:px-0">
+            <div className="card bg-base-100 shadow-2xl">
+                <figure><img className="w-4/5 h-[300px] lg:h-[400px]" src={photo} alt="Shoes" /></figure>
+                <div className="card-body space-y-2">
+                    <div className="text-center">
+                        <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{name}</h2>
 
-                    <div className="flex flex-col lg:flex-row">
-                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Brand : {brand}</p>
-                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Price : ${price}.00</p>
+                        <div className="flex flex-col lg:flex-row">
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">Brand : {brand}</p>
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">Price : ${price}.00</p>
+                        </div>
+                        <div className="flex flex-col lg:flex-row">
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">{select}</p>
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">{rating}</p>
+                        </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row">
-                        <p className="md:text-lg text-[#1C1B1B99] font-bold">{select}</p>
-                        <p className="md:text-lg text-[#1C1B1B99] font-bold">{rating}</p>
+                    <div className="card-actions justify-center ">
+                        <p className="text-center text-[#1C1B1B99] font-medium">{description}</p>
+                        <button onClick={() => handleDeleteCart(_id)} className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg my-4">Delete this item</button>
                     </div>
-                </div>
-                <div className="card-actions justify-center ">
-                    <p className="text-center text-[#1C1B1B99] font-medium">{description}</p>
-                    <button onClick={() => handleDeleteCart(_id)} className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg my-4">Delete this item</button>
                 </div>
             </div>
         </div>

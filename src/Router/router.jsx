@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             {
                 path : "/myCart",
                 element : <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader : () => fetch('http://localhost:5002/carts'),
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/carts'),
             },
             {
                 path : "/login",
@@ -47,44 +47,43 @@ const router = createBrowserRouter([
             {
                 path : '/description/:id',
                 element : <PrivateRoute><Description></Description></PrivateRoute>,
-                loader : ({params}) => fetch(`http://localhost:5002/products/${params.id}`)
+                loader : ({params}) => fetch(`https://dream-tech-server-app.vercel.app/products/${params.id}`)
             },
             {
                 path : "/apple",
                 element  :<Apple></Apple>,
-                loader : () => fetch('http://localhost:5002/products')
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/products')
             },
             {
                 path : "/samsung",
                 element : <Samsung></Samsung>,
-                loader : () => fetch('http://localhost:5002/products')
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/products')
             },
             {
                 path : "/google",
                 element  : <Google></Google>,
-                loader : () => fetch('http://localhost:5002/products'),
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/products'),
             },
             {
                 path : "/sony",
                 element : <Sony></Sony>,
-                loader : () => fetch('http://localhost:5002/products'),
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/products'),
             },
             {
                 path  : "/intel",
                 element : <Intel></Intel>,
-                loader : () => fetch('http://localhost:5002/products'),
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/products'),
             },
             {
                 path : "/xiaomi",
                 element : <Xiaomi></Xiaomi>,
-                loader : () => fetch('http://localhost:5002/products')
+                loader : () => fetch('https://dream-tech-server-app.vercel.app/products'),
             },
             {
                 path : '/update/:id',
                 element : <PrivateRoute><Update></Update></PrivateRoute>,
-                loader : ({params}) => fetch(`http://localhost:5002/products/${params.id}`),
+                loader : ({params}) => fetch(`https://dream-tech-server-app.vercel.app/products/${params.id}`),
             }
-            
         ]
     }
 ])

@@ -4,21 +4,21 @@ import Swal from "sweetalert2";
 const Update = () => {
 
     const updatedData = useLoaderData();
-    const { _id ,select, name, photo, brand, price, description, rating } = updatedData;
+    const { _id } = updatedData;
 
     const handleUpdateProduct = e => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
         const photo = form.photo.value;
-        const brandName = form.brandName.value;
-        const brand = brandName.toLowerCase();
+        const brand = form.brand.value;
         const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
-        const select = form.select.value;
-        const product = { select, name, photo, brand, price, description, rating };
-        fetch(`http://localhost:5002/products/${_id}`,{
+        const category = form.category.value;
+        const product = { name, photo, brand, price, category, description, rating };
+        console.log(category);
+        fetch(`https://dream-tech-server-app.vercel.app/products/${_id}`,{
             method : "PUT",
             headers : {
                 "Content-Type" : "application/json",
@@ -42,11 +42,10 @@ const Update = () => {
         <div className="p-4">
             <form onSubmit={handleUpdateProduct} className="w-full lg:w-1/2 mx-auto flex flex-col justify-center rounded px-8 pb-8 md:px-16">
                 <h1 className="font-bold text-2xl my-8">Update Product</h1>
-                <input defaultValue={name} className="w-full p-4 mb-4 border rounded-md" type="text" name="name" placeholder="Product Name" required id="1" /> <br />
-                <input defaultValue={photo} className="w-full p-4 mb-4 border rounded-md" type="text" name="photo" placeholder="Your photoURL" required id="2" /> <br />
-                <input defaultValue={brand} className="w-full p-4 mb-4 border rounded-md" type="text" name="brandName" placeholder="Brand Name" required id="3" /> <br />
-                <select defaultValue={select} required name="select" className="select w-full mb-4 border rounded-md">
-                    <option disabled>Pick your own category</option>
+                <input defaultValue={updatedData?.name} className="w-full p-4 mb-4 border rounded-md" type="text" name="name" placeholder="Product Name" /> <br />
+                <input defaultValue={updatedData?.photo} className="w-full p-4 mb-4 border rounded-md" type="text" name="photo" placeholder="Your photoURL"   /> <br />
+                <input defaultValue={updatedData?.brand} className="w-full p-4 mb-4 border rounded-md" type="text" name="brand" placeholder="Brand Name" /> <br />
+                <select defaultValue={updatedData?.category} name="category" className="select select-bordered w-full mb-4 border rounded-md">
                     <option>Mobile</option>
                     <option>Processor</option>
                     <option>Headphones</option>
@@ -57,9 +56,9 @@ const Update = () => {
                     <option>Camera</option>
                     <option>TV</option>
                 </select>
-                <input defaultValue={price} className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" required id="4" /> <br />
-                <textarea defaultValue={description} required name="description" id="5" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
-                <input defaultValue={rating} className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5" required id="5" /> <br />
+                <input defaultValue={updatedData?.price} className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" /> <br />
+                <textarea defaultValue={updatedData?.description} name="description" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
+                <input defaultValue={updatedData?.rating} className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5"/> <br />
                 <input className="w-full text-white font-medium py-3.5 rounded bg-[#DD2955]" type="submit" value="Update this Product" />
             </form>
         </div>

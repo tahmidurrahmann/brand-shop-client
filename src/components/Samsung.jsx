@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import Relevant from "../Relevant/Relevant";
 
 const Samsung = () => {
 
@@ -8,16 +9,14 @@ const Samsung = () => {
     const samsungData = useLoaderData();
 
     useEffect(() => {
-        const filterData = samsungData.filter(samsung => samsung.brand == 'samsung');
+        const filterData = samsungData.filter(samsung => samsung.brand == 'Samsung');
         setSamsungs(filterData);
     }, [samsungData])
 
 
     return (
         <div>
-            {
-                samsungs.length? <div>
-                    <div className="carousel w-full my-8">
+            <div className="carousel w-full my-8">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73fbe271026179.5bb6e7af358b6.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -40,27 +39,28 @@ const Samsung = () => {
                     </div>
                 </div>
             </div>
-
+            {
+                samsungs.length? 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto my-8 px-10">
                 {
-                    samsungs.map((apple, i) => <div key={i}>
+                    samsungs.map(apple => <div key={apple._id}>
                         <div className="card bg-base-100 shadow-2xl">
-                            <figure><img className="w-3/5 h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
+                            <figure><img className="w-3/5 h-[300px] lg:h-[400px]" src={apple?.photo} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <div className="text-center">
-                                    <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{apple.name}</h2>
+                                    <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{apple?.name}</h2>
                                     <div className="flex flex-col lg:flex-row">
-                                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Brand Name : {apple.brand}</p>
-                                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Product Cost : ${apple.price}.00</p>
+                                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Brand Name : {apple?.brand}</p>
+                                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Product Cost : ${apple?.price}.00</p>
                                     </div>
                                     <div className="flex flex-col lg:flex-row px-[72px]">
-                                        <p className="md:text-lg text-[#1C1B1B99] text-left md:text-center lg:text-left font-bold">Category : {apple.select}</p>
-                                        <p className="md:text-lg text-[#1C1B1B99] font-bold md:text-center lg:text-right">{apple.rating}</p>
+                                        <p className="md:text-lg text-[#1C1B1B99] text-left md:text-center lg:text-left font-bold">{apple?.category}</p>
+                                        <p className="md:text-lg text-[#1C1B1B99] font-bold md:text-center lg:text-right">{apple?.rating}</p>
                                     </div>
                                 </div>
                                 <div className="card-actions justify-center ">
-                                    <Link to={`/description/${apple._id}`}><button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Category Detail</button></Link>
-                                    <Link to={`/update/${apple._id}`}>
+                                    <Link to={`/description/${apple?._id}`}><button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Category Detail</button></Link>
+                                    <Link to={`/update/${apple?._id}`}>
                                         <button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Update</button>
                                     </Link>
                                 </div>
@@ -68,8 +68,7 @@ const Samsung = () => {
                         </div>
                     </div>)
                 }
-            </div>
-                </div> : <div className="w-full my-96"><h1 className="text-5xl font-semibold text-center"> Please login and add product </h1></div>
+            </div> : <Relevant></Relevant>
             }
         </div>
     );

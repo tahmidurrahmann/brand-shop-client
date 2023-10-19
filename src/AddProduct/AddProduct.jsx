@@ -7,15 +7,13 @@ const AddProduct = () => {
         const form = e.target;
         const name = form.name.value;
         const photo = form.photo.value;
-        const brandName = form.brandName.value;
-        const brand = brandName.toLowerCase();
+        const brand = form.brand.value;
         const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
-        const select = form.select.value;
-        const product = { select, name, photo, brand, price, description, rating };
-        console.log(product);
-        fetch('http://localhost:5002/products', {
+        const category = form.category.value;
+        const product = { name , photo, brand, category, price, description, rating };
+        fetch('https://dream-tech-server-app.vercel.app/products', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,11 +39,10 @@ const AddProduct = () => {
         <div className="p-4">
             <form onSubmit={handleAddProduct} className="w-full lg:w-1/2 mx-auto flex flex-col justify-center rounded px-8 pb-8 md:px-16">
                 <h1 className="font-bold text-2xl my-8">Add Product</h1>
-                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="name" placeholder="Product Name" required id="1" /> <br />
-                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="photo" placeholder="Your photoURL" required id="2" /> <br />
-                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="brandName" placeholder="Brand Name" required id="3" /> <br />
-                <select required name="select" className="select w-full mb-4 border rounded-md">
-                    <option disabled selected>Pick your own category</option>
+                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="name" placeholder="Product Name" required/> <br />
+                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="photo" placeholder="Your photoURL" required  /> <br />
+                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="brand" placeholder="Brand Name" required  /> <br />
+                <select name="category" className="select select-bordered w-full mb-4 border rounded-md" >
                     <option>Mobile</option>
                     <option>Processor</option>
                     <option>Headphones</option>
@@ -56,9 +53,9 @@ const AddProduct = () => {
                     <option>Camera</option>
                     <option>TV</option>
                 </select>
-                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" required id="4" /> <br />
-                <textarea required name="description" id="5" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
-                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5" required id="5" /> <br />
+                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" required  /> <br />
+                <textarea required name="description" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
+                <input className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5" required /> <br />
                 <input className="w-full text-white font-medium py-3.5 rounded bg-[#DD2955]" type="submit" value="Add Button" />
             </form>
         </div>

@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-gray-50 text-base-content rounded">
             <nav className="grid grid-flow-col gap-4">
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact us</a>
-                <a className="link link-hover">Add Product</a>
-                <a className="link link-hover">Login</a>
+                <Link to='/'><button className="link link-hover">Home</button></Link>
+                <Link to='/addProduct'><button className="link link-hover">Add Product</button></Link>
+                <Link to='/myCart'><button className="link link-hover">My Cart</button></Link>
+                <Link to='/login'><button className="link link-hover">Login</button></Link>
             </nav>
             <nav>
                 <div className="grid grid-flow-col gap-4">
@@ -15,7 +17,7 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                <p>Copyright © 2023 - All right reserved by DreamTech</p>
             </aside>
         </footer>
     );
