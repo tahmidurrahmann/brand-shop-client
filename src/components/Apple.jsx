@@ -13,7 +13,9 @@ const Apple = () => {
 
     return (
         <div>
-            <div className="carousel w-full">
+            {
+                apples.length? <div>
+                    <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://s.yimg.com/os/creatr-uploaded-images/2022-05/1cd0cb70-d6d0-11ec-bffb-4773eeb8ae79" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -56,13 +58,17 @@ const Apple = () => {
                                 </div>
                                 <div className="card-actions justify-center ">
                                     <Link to={`/description/${apple._id}`}><button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Category Detail</button></Link>
-                                    <button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Update</button>
+                                    <Link to={`/update/${apple._id}`}>
+                                        <button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Update</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </div>)
                 }
             </div>
+                </div> : <div className="w-full my-96"><h1 className="text-5xl font-semibold text-center"> Please login and add product </h1></div>
+            }
         </div>
     );
 };

@@ -13,11 +13,14 @@ import Google from "../components/Google";
 import Sony from "../components/Sony";
 import Intel from "../components/Intel";
 import Xiaomi from "../components/Xiaomi";
+import Update from "../Update/Update";
+import Error from "../Error/Error";
 
 const router = createBrowserRouter([
     {
         path : "/",
         element : <Layout></Layout>,
+        errorElement : <Error></Error>,
         children : [
             {
                 path : "/",
@@ -75,6 +78,11 @@ const router = createBrowserRouter([
                 path : "/xiaomi",
                 element : <Xiaomi></Xiaomi>,
                 loader : () => fetch('http://localhost:5002/products')
+            },
+            {
+                path : '/update/:id',
+                element : <PrivateRoute><Update></Update></PrivateRoute>,
+                loader : ({params}) => fetch(`http://localhost:5002/products/${params.id}`),
             }
             
         ]

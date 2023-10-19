@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 const Description = () => {
 
     const descriptionData = useLoaderData();
-    console.log(descriptionData);
 
     const { brand, description, name, photo, price, rating, select } = descriptionData;
 
