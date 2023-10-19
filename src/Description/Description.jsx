@@ -25,7 +25,7 @@ const Description = () => {
                     title: 'Success!',
                     text: 'Successfully added this item',
                     icon: 'success',
-                    confirmButtonText: 'Good'
+                    confirmButtonText: 'Good!'
                   })
             }
         })
