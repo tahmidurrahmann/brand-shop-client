@@ -14,8 +14,7 @@ const Google = () => {
 
     return (
         <div>
-
-            <div className="carousel w-full">
+            <div className="carousel w-full my-6">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/60e4751febc90f1ebc049065/INDIA-US-GOOGLE/960x0.jpg?format=jpg&width=960" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -43,8 +42,8 @@ const Google = () => {
                 {
                     googles.map((apple, i) => <div key={i}>
                         <div className="card bg-base-100 shadow-2xl">
-                            <figure><img className="w-full h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
-                            <div className="card-body">
+                            <figure><img className="w-4/5 h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
+                            <div className="card-body space-y-2">
                                 <div className="text-center">
                                     <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{apple.name}</h2>
                                     <div className="flex flex-col lg:flex-row">
@@ -52,7 +51,7 @@ const Google = () => {
                                         <p className="md:text-lg text-[#1C1B1B99] font-bold">Product Cost : ${apple.price}.00</p>
                                     </div>
                                     <div className="flex flex-col lg:flex-row px-[72px]">
-                                        <p className="md:text-lg text-[#1C1B1B99] text-left md:text-center lg:text-left font-bold">Category : {apple.select}</p>
+                                        <p className="md:text-lg text-[#1C1B1B99] text-left md:text-center lg:text-left font-bold">{apple.select}</p>
                                         <p className="md:text-lg text-[#1C1B1B99] font-bold md:text-center lg:text-right">{apple.rating}</p>
                                     </div>
                                 </div>

@@ -13,7 +13,6 @@ const Apple = () => {
 
     return (
         <div>
-
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://s.yimg.com/os/creatr-uploaded-images/2022-05/1cd0cb70-d6d0-11ec-bffb-4773eeb8ae79" className="lg:w-4/5 mx-auto lg:h-[700px]" />

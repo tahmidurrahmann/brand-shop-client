@@ -14,24 +14,23 @@ const Sony = () => {
 
     return (
         <div>
-
-            <div className="carousel w-full">
+            <div className="carousel w-full my-8">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
+                    <img src="https://i.pinimg.com/originals/ab/a1/55/aba155b06697f42b44ab109eaed24553.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                    <img src="https://images1.the-dots.com/v1/929080.jpg?p=socialLarge" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide1" className="btn btn-circle">❮</a>
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/fb439443288877.57ea2d9a6fd48.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
@@ -43,7 +42,7 @@ const Sony = () => {
                 {
                     sonys.map((apple, i) => <div key={i}>
                         <div className="card bg-base-100 shadow-2xl">
-                            <figure><img className="w-full h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
+                            <figure><img className="w-3/5 h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <div className="text-center">
                                     <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{apple.name}</h2>

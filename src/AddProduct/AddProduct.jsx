@@ -47,12 +47,14 @@ const AddProduct = () => {
                 <select required name="select" className="select w-full mb-4 border rounded-md">
                     <option disabled selected>Pick your own category</option>
                     <option>Mobile</option>
-                    <option>Computer</option>
+                    <option>Processor</option>
                     <option>Headphones</option>
                     <option>Smart Watch</option>
                     <option>Laptops</option>
                     <option>Airpods</option>
                     <option>Earphones</option>
+                    <option>Camera</option>
+                    <option>TV</option>
                 </select>
                 <input className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" required id="4" /> <br />
                 <textarea required name="description" id="5" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>

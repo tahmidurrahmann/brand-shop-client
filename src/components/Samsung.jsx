@@ -15,24 +15,23 @@ const Samsung = () => {
 
     return (
         <div>
-
-            <div className="carousel w-full">
+            <div className="carousel w-full my-8">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73fbe271026179.5bb6e7af358b6.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+                    <img src="https://img.global.news.samsung.com/global/wp-content/uploads/2017/04/Leo-Burnett-Campaign-S8_main_1.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide1" className="btn btn-circle">❮</a>
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+                    <img src="https://s3-prod.adage.com/s3fs-public/20221013_Samsung_Galaxy-Z-Flip4_OOH_3X2.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
@@ -44,7 +43,7 @@ const Samsung = () => {
                 {
                     samsungs.map((apple, i) => <div key={i}>
                         <div className="card bg-base-100 shadow-2xl">
-                            <figure><img className="w-full h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
+                            <figure><img className="w-3/5 h-[300px] lg:h-[400px]" src={apple.photo} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <div className="text-center">
                                     <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{apple.name}</h2>
