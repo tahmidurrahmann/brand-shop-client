@@ -1,8 +1,9 @@
 import Swal from "sweetalert2";
+import { AiFillDelete } from 'react-icons/ai';
 
 const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
 
-    const { _id, brand, description, name, photo, price, rating, select } = cart;
+    const { _id, brand, description, name, photo, price, rating, category } = cart;
     console.log(cart);
 
     const handleDeleteCart = (id) => {
@@ -41,24 +42,24 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
 
     return (
         <div className="px-10 md:px-5 lg:px-0">
-            <div className="card bg-base-100 shadow-2xl">
-                <figure><img className="w-4/5 h-[300px] lg:h-[400px]" src={photo} alt="Shoes" /></figure>
+            <div className="bg-gradient-to-r from-white to-gray-400 bg-base-100 shadow-2xl">
+                <figure><img src={photo} alt="Shoes" /></figure>
                 <div className="card-body space-y-2">
                     <div className="text-center">
                         <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{name}</h2>
 
                         <div className="flex flex-col lg:flex-row">
-                            <p className="md:text-lg text-[#1C1B1B99] font-bold">Brand : {brand}</p>
-                            <p className="md:text-lg text-[#1C1B1B99] font-bold">Price : ${price}.00</p>
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">{brand}</p>
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">{price}$</p>
                         </div>
                         <div className="flex flex-col lg:flex-row">
-                            <p className="md:text-lg text-[#1C1B1B99] font-bold">{select}</p>
+                            <p className="md:text-lg text-[#1C1B1B99] font-bold">{category}</p>
                             <p className="md:text-lg text-[#1C1B1B99] font-bold">{rating}</p>
                         </div>
                     </div>
                     <div className="card-actions justify-center ">
-                        <p className="text-center text-[#1C1B1B99] font-medium">{description}</p>
-                        <button onClick={() => handleDeleteCart(_id)} className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg my-4">Delete this item</button>
+                        <p className="text-center text-[#1C1B1B99] font-medium">{description?.length > 100 ? description.slice(0,100) : description}...</p>
+                        <button onClick={() => handleDeleteCart(_id)} className="text-lg text-white font-medium bg-gradient-to-r from-[#DD2955] to-orange-800 py-2 px-4 lg:px-6 rounded-lg my-4 flex items-center gap-1.5"><span>Delete</span><AiFillDelete></AiFillDelete></button>
                     </div>
                 </div>
             </div>

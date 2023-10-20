@@ -55,7 +55,7 @@ const Login = () => {
                 <div>
                     {loginError && <p className="text-red-500 my-4">{loginError}</p>}
                 </div>
-                <input className="w-full text-white font-medium py-3.5 rounded bg-[#DD2955]" type="submit" value="Login" />
+                <input className="w-full text-white font-medium py-3.5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800" type="submit" value="Login" />
                 <p className="text-center mt-10">Do not have an account?<Link to='/register' className="text-[#DD2955]"> Create an account</Link></p>
             </form>
             <p className="text-center my-6">Or login with</p>

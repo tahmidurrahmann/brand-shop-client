@@ -56,7 +56,7 @@ const AddProduct = () => {
                 <input className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" required  /> <br />
                 <textarea required name="description" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
                 <input className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5" required /> <br />
-                <input className="w-full text-white font-medium py-3.5 rounded bg-[#DD2955]" type="submit" value="Add Button" />
+                <input className="w-full text-white font-medium py-3.5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800" type="submit" value="Add Button" />
             </form>
         </div>
     );

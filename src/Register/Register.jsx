@@ -82,7 +82,7 @@ const Register = () => {
                 <div>
                     {displayError && <p className="text-red-500 my-4">{displayError}</p>}
                 </div>
-                <input className="w-full text-white font-medium py-3.5 rounded bg-[#DD2955]" type="submit" value="Register" />
+                <input className="w-full text-white font-medium py-3.5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800" type="submit" value="Register" />
                 <p className="text-center mt-10">Already have an account?<Link to='/login' className="text-[#DD2955]"> Login</Link></p>
             </form>
             <button onClick={handleGoogleSignIn} className="btn btn-outline btn-error flex justify-center items-center gap-16 border rounded-full  md:w-1/2 lg:w-1/5 mx-auto py-4">

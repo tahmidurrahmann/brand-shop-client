@@ -39,35 +39,36 @@ const Intel = () => {
                 </div>
             </div>
             {
-                intels.length? 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto my-8 px-10">
-                {
-                    intels.map(apple => <div key={apple?._id}>
-                        <div className="card bg-base-100 shadow-2xl">
-                            <figure><img className="w-3/5 h-[300px] lg:h-[400px]" src={apple?.photo} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <div className="text-center">
-                                    <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{apple?.name}</h2>
-                                    <div className="flex flex-col lg:flex-row">
-                                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Brand Name : {apple?.brand}</p>
-                                        <p className="md:text-lg text-[#1C1B1B99] font-bold">Product Cost : ${apple?.price}.00</p>
+                intels.length ?
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto my-8 px-10">
+                        {
+                            intels.map(apple => <div key={apple?._id}>
+                                <div className="bg-gradient-to-r from-white to-gray-400 rounded-md w-80 md:w-96 p-5">
+                                    <div>
+                                        <img src={apple?.photo} className="w-96 h-96" alt="" />
                                     </div>
-                                    <div className="flex flex-col lg:flex-row px-[72px]">
-                                        <p className="md:text-lg text-[#1C1B1B99] text-left md:text-center lg:text-left font-bold">{apple?.category}</p>
-                                        <p className="md:text-lg text-[#1C1B1B99] font-bold md:text-center lg:text-right">{apple?.rating}</p>
+                                    <div className="text-center space-y-2">
+                                        <h2 className="text-lg font-semibold">{apple?.brand}</h2>
+                                        <h3 className="font-bold text-xl">{apple?.name}</h3>
+                                        <div className="flex gap-5 justify-center items-center">
+
+                                            <p className="text-lg text-[#1C1B1B99] font-semibold">{apple?.category}</p>
+                                            <p className="text-lg text-[#1C1B1B99] font-semibold">{apple?.price}$</p>
+                                        </div>
+                                        <div className="flex gap-5 justify-center items-center">
+
+                                            <p>{apple?.rating}</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-1.5 w-1/2 mx-auto my-3 justify-center items-center">
+                                        <Link to={`/description/${apple?._id}`}><button className="text-white py-1 px-5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800">Details</button></Link>
+                                        <Link to={`/update/${apple?._id}`}><button className="text-[#DD2955] border py-[3px] px-5 rounded border-[#DD2955]">Update</button></Link>
                                     </div>
                                 </div>
-                                <div className="card-actions justify-center ">
-                                    <Link to={`/description/${apple?._id}`}><button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Category Detail</button></Link>
-                                    <Link to={`/update/${apple?._id}`}>
-                                    <button className="text-lg text-white font-medium bg-[#DD2955] py-2 px-4 lg:px-6 rounded-lg">Update</button></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>)
-                }
-            </div> 
-            : <Relevant></Relevant>
+                            </div>)
+                        }
+                    </div>
+                    : <Relevant></Relevant>
             }
         </div>
     );

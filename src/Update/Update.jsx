@@ -59,7 +59,7 @@ const Update = () => {
                 <input defaultValue={updatedData?.price} className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" /> <br />
                 <textarea defaultValue={updatedData?.description} name="description" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
                 <input defaultValue={updatedData?.rating} className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5"/> <br />
-                <input className="w-full text-white font-medium py-3.5 rounded bg-[#DD2955]" type="submit" value="Update this Product" />
+                <input className="w-full text-white font-medium py-3.5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800" type="submit" value="Update this Product" />
             </form>
         </div>
     );
