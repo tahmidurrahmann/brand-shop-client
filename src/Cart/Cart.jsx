@@ -42,8 +42,10 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
 
     return (
         <div className="px-10 md:px-5 lg:px-0">
-            <div className="bg-gradient-to-r from-white to-gray-400 bg-base-100 shadow-2xl">
-                <figure><img src={photo} alt="Shoes" /></figure>
+            <div className="bg-gradient-to-r from-white to-gray-400 bg-base-100 shadow-2xl rounded-lg">
+                <div>
+                    <img className="w-96 h-96 mx-auto" src={photo} alt="Shoes" />
+                </div>
                 <div className="card-body space-y-2">
                     <div className="text-center">
                         <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{name}</h2>

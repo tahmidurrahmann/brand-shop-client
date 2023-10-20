@@ -39,12 +39,12 @@ const Apple = () => {
             </div>
             {
                 apples.length ?
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto my-8 px-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto my-10 md:my-20 px-6 lg:px-0">
                         {
                             apples.map(apple => <div key={apple._id}>
-                                <div className="bg-gradient-to-r from-white to-gray-400 rounded-md w-80 md:w-96 p-5">
+                                <div className="bg-gradient-to-r from-gray-100 via-white to-gray-400 rounded-md p-5 shadow-2xl">
                                     <div>
-                                        <img src={apple?.photo} className="w-96 h-96" alt="" />
+                                        <img src={apple?.photo} className="w-96 h-96 mx-auto" alt={apple?.photo} />
                                     </div>
                                     <div className="text-center space-y-2">
                                     <h2 className="text-lg font-semibold">{apple?.brand}</h2>
@@ -60,8 +60,8 @@ const Apple = () => {
                                         </div>
                                     </div>
                                     <div className="flex gap-1.5 w-1/2 mx-auto my-3 justify-center items-center">
-                                        <Link to={`/description/${apple?._id}`}><button className="text-white py-1 px-5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800">Details</button></Link>
-                                        <Link to={`/update/${apple?._id}`}><button className="text-[#DD2955] border py-[3px] px-5 rounded border-[#DD2955]">Update</button></Link>
+                                        <Link to={`/description/${apple?._id}`}><button className="text-white py-1 px-5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800 hover:text-black">Details</button></Link>
+                                        <Link to={`/update/${apple?._id}`}><button className="text-[#DD2955] border py-[3px] px-5 rounded border-[#DD2955] hover:text-black">Update</button></Link>
                                     </div>
                                 </div>
                             </div>)

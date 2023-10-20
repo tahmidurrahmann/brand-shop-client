@@ -41,12 +41,12 @@ const Samsung = () => {
             </div>
             {
                 samsungs.length ?
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto my-8 px-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto my-10 md:my-20 px-6 lg:px-0">
                         {
                             samsungs.map(apple => <div key={apple._id}>
-                                <div className="bg-gradient-to-r from-white to-gray-400 rounded-md w-80 md:w-96 p-5">
+                                <div className="bg-gradient-to-r from-gray-100 via-white to-gray-400 rounded-md p-5 shadow-2xl">
                                     <div>
-                                        <img src={apple?.photo} className="w-96 h-96" alt="" />
+                                        <img src={apple?.photo} className="w-96 h-96 mx-auto" alt={apple?.photo} />
                                     </div>
                                     <div className="text-center space-y-2">
                                         <h2 className="text-lg font-semibold">{apple?.brand}</h2>
@@ -68,7 +68,8 @@ const Samsung = () => {
                                 </div>
                             </div>)
                         }
-                    </div> : <Relevant></Relevant>
+                    </div>
+                    : <Relevant></Relevant>
             }
         </div>
     );
