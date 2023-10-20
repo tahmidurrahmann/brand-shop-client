@@ -50,11 +50,11 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
                     <div className="text-center">
                         <h2 className="text-xl lg:text-2xl font-bold text-[#1C1B1B]">{name}</h2>
 
-                        <div className="flex flex-col lg:flex-row">
+                        <div className="flex flex-col md:flex-row">
                             <p className="md:text-lg text-[#1C1B1B99] font-bold">{brand}</p>
                             <p className="md:text-lg text-[#1C1B1B99] font-bold">{price}$</p>
                         </div>
-                        <div className="flex flex-col lg:flex-row">
+                        <div className="flex flex-col md:flex-row">
                             <p className="md:text-lg text-[#1C1B1B99] font-bold">{category}</p>
                             <p className="md:text-lg text-[#1C1B1B99] font-bold">{rating}</p>
                         </div>

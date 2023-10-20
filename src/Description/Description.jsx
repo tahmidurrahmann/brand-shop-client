@@ -33,8 +33,8 @@ const Description = () => {
 
 
     return (
-        <div>
-            <div className="bg-gradient-to-r from-white to-gray-400 py-20">
+        <div className="my-10 lg:my-0 px-10 lg:px-0">
+            <div className="bg-gradient-to-r from-white to-gray-400 py-20 rounded-xl lg:rounded-none w-full mx-auto">
             <div className="max-w-screen-xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="col-span-1 flex items-center">
@@ -48,7 +48,7 @@ const Description = () => {
                             <p className="text-xl font-semibold">{brand}</p>
                             <p className="text-xl font-semibold">{rating}</p>
                             <h2 className="text-xl font-semibold">{category}</h2>
-                            <button onClick={handleAddCart} className="text-lg text-white font-medium bg-gradient-to-r from-[#DD2955] to-orange-800 flex gap-1.5 items-center py-2 px-4 lg:px-6 rounded-lg my-4"><span>Add to Cart</span><BsFillCartFill></BsFillCartFill></button>
+                            <button onClick={handleAddCart} className="text-lg text-white font-medium bg-gradient-to-r from-[#DD2955] to-orange-800 flex gap-1.5 items-center justify-center py-2 px-4 lg:px-6 rounded-lg my-4"><span>Add to Cart</span><BsFillCartFill></BsFillCartFill></button>
                         </div>
                     </div>
                 </div>

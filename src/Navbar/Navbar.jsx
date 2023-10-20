@@ -89,7 +89,7 @@ const Navbar = () => {
             <div>
                 {user ? <div className="flex flex-col md:flex-row gap-5 items-center">
                     <h1 className="text-black text-lg font-medium font-poppins">{user.displayName}</h1>
-                    <span><button onClick={handleLogOut} className="text-lg text-white font-medium bg-gradient-to-r from-[#DD2955] to-orange-800 py-2 px-4 lg:px-6 rounded-lg">LogOut</button></span>
+                    <span><button onClick={handleLogOut} className="text-lg text-white font-medium bg-gradient-to-r from-[#DD2955] to-orange-800 py-2 px-4 lg:px-6 rounded-lg">Logout</button></span>
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img src={user?.photoURL} alt="" />
