@@ -46,9 +46,9 @@ const Login = () => {
         <div className="p-4">
             <form onSubmit={handleLogin} className="w-full lg:w-1/2 mx-auto flex flex-col justify-center rounded p-8 md:p-16">
                 <h1 className="font-bold text-2xl my-8">Login to account</h1>
-                <input className="w-full p-4 mb-4 border rounded-md" type="email" name="email" placeholder="Your Email" required id="1" /> <br />
+                <input className="w-full p-4 mb-4 border rounded-md bg-gradient-to-r from-white to-gray-400" type="email" name="email" placeholder="Your Email" required id="1" /> <br />
                 <div className="relative">
-                    <input className="w-full border p-4 mb-4 rounded-md"
+                    <input className="w-full border p-4 mb-4 rounded-md bg-gradient-to-r from-white to-gray-400"
                         type={showPassword ? "text" : "password"}
                         name="password" placeholder="Your Password" required id="2" /> <span className="absolute top-5 right-3" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye> }</span>
                 </div> <br />

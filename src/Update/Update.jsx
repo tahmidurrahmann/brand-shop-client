@@ -42,23 +42,23 @@ const Update = () => {
         <div className="p-4">
             <form onSubmit={handleUpdateProduct} className="w-full lg:w-1/2 mx-auto flex flex-col justify-center rounded px-8 pb-8 md:px-16">
                 <h1 className="font-bold text-2xl my-8">Update Product</h1>
-                <input defaultValue={updatedData?.name} className="w-full p-4 mb-4 border rounded-md" type="text" name="name" placeholder="Product Name" /> <br />
-                <input defaultValue={updatedData?.photo} className="w-full p-4 mb-4 border rounded-md" type="text" name="photo" placeholder="Your photoURL"   /> <br />
-                <input defaultValue={updatedData?.brand} className="w-full p-4 mb-4 border rounded-md" type="text" name="brand" placeholder="Brand Name" /> <br />
+                <input defaultValue={updatedData?.name} className="bg-gradient-to-r from-white to-gray-400 w-full p-4 mb-4 border rounded-md" type="text" name="name" placeholder="Product Name" /> <br />
+                <input defaultValue={updatedData?.photo} className="bg-gradient-to-r from-white to-gray-400 w-full p-4 mb-4 border rounded-md" type="text" name="photo" placeholder="Your photoURL"   /> <br />
+                <input defaultValue={updatedData?.brand} className="bg-gradient-to-r from-white to-gray-400 w-full p-4 mb-4 border rounded-md" type="text" name="brand" placeholder="Brand Name" /> <br />
                 <select defaultValue={updatedData?.category} name="category" className="select select-bordered w-full mb-4 border rounded-md">
-                    <option>Mobile</option>
+                <option>Mobile</option>
                     <option>Processor</option>
-                    <option>Headphones</option>
+                    <option>Headphone</option>
                     <option>Smart Watch</option>
-                    <option>Laptops</option>
-                    <option>Airpods</option>
-                    <option>Earphones</option>
+                    <option>Laptop</option>
+                    <option>Airpod</option>
+                    <option>Earphone</option>
                     <option>Camera</option>
                     <option>TV</option>
                 </select>
-                <input defaultValue={updatedData?.price} className="w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" /> <br />
-                <textarea defaultValue={updatedData?.description} name="description" className="w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
-                <input defaultValue={updatedData?.rating} className="w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5"/> <br />
+                <textarea defaultValue={updatedData?.description} name="description" className="bg-gradient-to-r from-white to-gray-400 w-full p-4 mb-4 border rounded-md" placeholder="Describe your product details" cols="15" rows="6"></textarea>
+                <input defaultValue={updatedData?.price} className="bg-gradient-to-r from-white to-gray-400 w-full p-4 mb-4 border rounded-md" type="text" name="price" placeholder="Price of your Product" /> <br />
+                <input defaultValue={updatedData?.rating} className="bg-gradient-to-r from-white to-gray-400 w-full p-4 mb-4 border rounded-md" type="text" name="rating" placeholder="Give your rating out of 5"/> <br />
                 <input className="w-full text-white font-medium py-3.5 rounded bg-gradient-to-r from-[#DD2955] to-orange-800" type="submit" value="Update this Product" />
             </form>
         </div>

@@ -38,9 +38,10 @@ const Navbar = () => {
     }
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between mx-auto container items-center my-3 md:my-4 space-y-5 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-between mx-auto container items-center my-4 space-y-5 lg:space-y-0">
             <div className="flex items-center">
-                <img className="w-[36px]" src="https://image.similarpng.com/very-thumbnail/2021/05/Letter-D-logo-design-template-with-geometric-shape-style-on-transparent-background-PNG.png" alt="" />
+                {/* <img className="w-[80px]" src="https://i.ibb.co/v3hJwfV/images-removebg-preview.png" alt="" /> */}
+                <img className="w-[36px]" src="https://i.ibb.co/ZWNKnHg/Letter-D-logo-design-template-with-geometric-shape-style-on-transparent-background-PNG-removebg-prev.png" alt="" />
                 <h1 className="text-4xl font-extrabold">ream<span className="">Tech</span></h1>
             </div>
             <div className="flex flex-col md:flex-row gap-12 items-center">
