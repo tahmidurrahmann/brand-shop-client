@@ -5,7 +5,6 @@ import Rating from "react-rating";
 const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
 
     const { _id, brand, description, name, photo, price, rating, category } = cart;
-    console.log(cart);
 
     const handleDeleteCart = (id) => {
         Swal.fire({
