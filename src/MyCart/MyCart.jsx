@@ -7,6 +7,7 @@ const MyCart = () => {
     const cartData = useLoaderData();
 
     const [remainingCarts, setRemainingCarts] = useState(cartData);
+    console.log(remainingCarts);
 
     return (
         <div>

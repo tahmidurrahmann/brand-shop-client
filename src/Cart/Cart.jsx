@@ -18,8 +18,8 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-
-                fetch(`https://dream-tech-server-app.vercel.app/carts/${id}`, {
+                console.log(id);
+                fetch(`http://localhost:5000/carts/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -34,8 +34,8 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
                             const remaining = remainingCarts.filter(carts => carts._id !== id);
                             setRemainingCarts(remaining);
                         }
+                        console.log(data);
                     })
-
 
             }
         })
