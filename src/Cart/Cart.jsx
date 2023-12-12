@@ -18,7 +18,7 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 console.log(id);
-                fetch(`http://localhost:5000/carts/${id}`, {
+                fetch(`https://dream-tech-server-p07cxoeoq-tahmidur-rahmans-projects.vercel.app/carts/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -33,7 +33,6 @@ const Cart = ({ cart, remainingCarts, setRemainingCarts }) => {
                             const remaining = remainingCarts.filter(carts => carts._id !== id);
                             setRemainingCarts(remaining);
                         }
-                        console.log(data);
                     })
 
             }
