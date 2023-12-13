@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Relevant from "../Relevant/Relevant";
 import Rating from "react-rating";
@@ -7,11 +7,14 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { BsFillCartFill } from "react-icons/bs";
 import Swal from "sweetalert2";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Samsung = () => {
 
     const [samsungs, setSamsungs] = useState([]);
     const [details, setDetails] = useState({});
+    const { user } = useContext(AuthContext);
+    const email = user?.email;
 
     const samsungData = useLoaderData();
 
@@ -40,7 +43,7 @@ const Samsung = () => {
         const price = details?.price;
         const rating = details?.rating;
         const category = details?.category;
-        const data = { brand, description, name, photo, price, rating, category }
+        const data = { brand, description, name, photo, price, rating, category, email }
         fetch('https://dream-tech-server-app.vercel.app/carts', {
             method: "POST",
             headers: {
@@ -169,15 +172,15 @@ const Samsung = () => {
                                                             leaveFrom="opacity-100 scale-100"
                                                             leaveTo="opacity-0 scale-95"
                                                         >
-                                                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                                            <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                                                                 <div className="bg-gradient-to-r from-white to-gray-400 w-full mx-auto">
                                                                     <div>
                                                                         <div>
-                                                                            <div className="flex items-center">
+                                                                            <div className="flex items-center justify-center">
                                                                                 <img src={details?.photo} alt="" />
                                                                             </div>
                                                                             <div className="flex items-center px-4">
-                                                                                <div className="space-y-4 text-center md:text-left">
+                                                                                <div className="space-y-4 p-6  text-center md:text-left">
                                                                                     <h2 className="text-3xl font-semibold">{details?.name}</h2>
                                                                                     <h2 className="text-xl font-bold">{details?.price}$</h2>
                                                                                     <p className="text-gray-500">{details?.description}</p>

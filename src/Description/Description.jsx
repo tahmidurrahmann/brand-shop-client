@@ -17,6 +17,7 @@ const Description = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
     const [review, setReview] = useState([]);
+    const email = user?.email;
 
     const [allReviews, refetch, isPending] = useReviews();
 
@@ -31,7 +32,7 @@ const Description = () => {
 
     const { brand, description, name, photo, price, rating, category, _id } = descriptionData;
 
-    const carts = { brand, description, name, photo, price, rating, category };
+    const carts = { brand, description, name, photo, price, rating, category, email };
 
     useEffect(() => {
         if (allReviews?.length) {
