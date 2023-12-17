@@ -65,7 +65,7 @@ const Intel = () => {
     }
 
     return (
-        <div>
+        <div className="-mt-20">
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://images.squarespace-cdn.com/content/v1/592fa861f7e0abb6ba906720/1561499432917-JFG9AZ758X64K7VJI7K5/Picture1.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />

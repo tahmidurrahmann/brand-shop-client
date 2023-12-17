@@ -65,8 +65,7 @@ const Xiaomi = () => {
     }
 
     return (
-        <div>
-
+        <div className="-mt-24">
             <div className="carousel w-full my-8">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2021/08/image-6-scaled.jpeg?ssl=1" className="lg:w-4/5 mx-auto lg:h-[700px]" />

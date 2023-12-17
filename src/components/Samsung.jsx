@@ -65,7 +65,7 @@ const Samsung = () => {
     }
 
     return (
-        <div>
+        <div className="-mt-24">
             <div className="carousel w-full my-8">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73fbe271026179.5bb6e7af358b6.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />

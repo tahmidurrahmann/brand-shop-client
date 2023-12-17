@@ -65,7 +65,7 @@ const Google = () => {
     }
 
     return (
-        <div>
+        <div className="-mt-24">
             <div className="carousel w-full my-6">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/60e4751febc90f1ebc049065/INDIA-US-GOOGLE/960x0.jpg?format=jpg&width=960" className="lg:w-4/5 mx-auto lg:h-[700px]" />

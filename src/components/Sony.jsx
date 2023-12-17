@@ -65,7 +65,7 @@ const Sony = () => {
     }
 
     return (
-        <div>
+        <div className="-mt-24">
             <div className="carousel w-full my-8">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://i.pinimg.com/originals/ab/a1/55/aba155b06697f42b44ab109eaed24553.jpg" className="lg:w-4/5 mx-auto lg:h-[700px]" />
